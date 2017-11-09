@@ -1,0 +1,11 @@
+@import 'public/base';
+@font-face{
+	font-family: myFirstFont;
+	src: url('../font/hiragino.otf')
+}
+.warpper{
+	margin:0 auto;
+	width:1366px;
+	height:944px;
+	background:url(../images/login_bg.jpg) no-repeat;
+}
