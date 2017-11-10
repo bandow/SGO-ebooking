@@ -4,13 +4,21 @@ $subtitleColor:#a50000;
 $white:#fff;
 $black:#000;
 
+// box-shadow
+@mixin box-shadow($transforms) {
+	-moz-box-shadow: $transforms;
+	-webkit-box-shadow: $transforms;
+    box-shadow: $transforms;
+}
+
 @mixin transform($transforms) {
-	-moz-transform: $transforms;
-	-o-transform: $transforms;
-	-ms-transform: $transforms;
-	-webkit-transform: $transforms;
+  -moz-transform: $transforms;
+  -o-transform: $transforms;
+  -ms-transform: $transforms;
+  -webkit-transform: $transforms;
     transform: $transforms;
 }
+
 // rotate
 @mixin rotate ($deg) {
   @include transform(rotate(#{$deg}deg));

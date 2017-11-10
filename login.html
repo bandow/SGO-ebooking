@@ -16,13 +16,38 @@
 				<div class="img"></div>
 			</div>
 			<div class="right">
-				<p><i></i><span>2017.11.03</span><span>周五</span><span>10:40</span></p>
+				<p><i></i><span id="date"></span><span id="week"></span><span id="time"></span></p>
 				<a class="setting" href=""></a>
 				<a class="close" href=""></a>
 			</div>
 		</div>
 		<div class="login-content">
-			
+			<div class="login-content-text">
+				<div class="head">
+					<p>HOTELSGO.CN</p>
+					<img src="images/title.png" alt="酒店营销套件">
+				</div>
+				<div class="middle">
+					<i class="arrow"></i>
+					<i class="cell"></i>
+					<div class="login">
+						<div class="top">
+							<i class="hotel"></i>
+							<i class="icon"></i>
+							<p>2018</p>
+						</div>
+						<div class="bottom">
+							<div class="user-login"><i class="l"></i><label><input type="text" placeholder="用户名"></label><i class="r"></i></div>
+							<div class="password"><i class="l"></i><label><input type="password" placeholder="密码"></label><i class="r"></i></div>
+							<div class="btn"><a href="">登录</a></div>
+							<div class="code"></div>
+						</div>
+					</div>
+				</div>
+				<div class="foot">
+					<div class="city" id="weather"><span>广州</span><span>晴间多云</span></div>
+				</div>
+			</div>
 		</div>
 		<div class="footer">
 			<div class="footer-content">
@@ -75,16 +100,41 @@
 	</div>
 </body>
 <!-- script begin -->
-<script src="plugins/jquery/jquery-3.1.1.min.js"></script>
+<script src="plugins/leoweather/jquery.min.js"></script>
+<script src="plugins/leoweather/jquery.leoweather.min.js"></script>
 <script>
 	$(document).ready(function(){
 		var windowHeight=$(window).height();
 		var headerHeight=$(".header").height();
 		var footerHeight=$(".footer").height();
+		var loginContentTextHeight=$(".login-content-text").height();
 		var footerTop=windowHeight-headerHeight-footerHeight;
 		$(".warpper").height(windowHeight);
 		$(".login-content").css("height",footerTop);
+		$(".login-content-text").css("paddingTop",(footerTop-loginContentTextHeight)/2)
+		//运行时间
+		getMyTime();
+		//天气预报
+		$('#weather').leoweather({format:'<p>{城市}<span></span>{天气}<span></span></p><i class="icon-{图标}">{气温}℃</i>'});
 	});
+	//前面补0
+    function p(n){return n<10?'0'+n:n;}
+	//当前时间
+	function getMyTime(){
+        var myDate=new Date();
+        var year=myDate.getFullYear();
+        var month=myDate.getMonth()+1;
+        var day=myDate.getDate();
+        var week=myDate.getDay();
+        var array=['星期日','星期一','星期二','星期三','星期四','星期五','星期六',];
+        var hour=myDate.getHours();
+        var minute=myDate.getMinutes();
+        var second=myDate.getSeconds();
+        document.getElementById('date').innerHTML=year+'.'+month+'.'+day;
+        document.getElementById('week').innerHTML=array[week];
+        document.getElementById('time').innerHTML=p(hour)+':'+p(minute)+':'+p(second);
+        setTimeout('getMyTime()',500);
+    }
 </script>
 <!-- script end -->
 </html>

@@ -74,6 +74,223 @@
 	margin:0 auto;
 	width:100%;
 }
+.login-content-text{
+	float:right;
+	.head{
+		overflow:hidden;
+		padding-right:104px;
+		p{
+			font:12px/2 myFirstFont, $publicFont;
+			color:#fff;
+			text-align:right;
+		}
+		img{
+		    float: right;
+			width:356px;
+			height:57px;
+		}
+	}
+	.middle{
+		height:auto;
+		overflow:hidden;
+		margin:15px 0;
+		>i{
+			margin:20px 20px 0 0;
+			float:left;
+		}
+		.arrow{
+			display:inline-block;
+			width:23px;
+			height:38px;
+			background:url("../images/sgo_icon.png") -135px 0 no-repeat;
+		}
+		.cell{
+			display:inline-block;
+			width:40px;
+			height:40px;
+			background:url("../images/sgo_icon.png") -168px 0 no-repeat;
+		}
+		.login{
+			float:left;
+			width:1154px;
+			height:auto;
+			.top{
+				background:rgba(43,43,43,.8);
+				overflow:hidden;
+				.hotel{
+					float:left;
+					margin:16px 0  0 40px;
+					display:inline-block;
+					width:52px;
+					height:52px;
+					background:url("../images/sgo_icon.png") -212px 0 no-repeat;
+				}
+				.icon{
+					float:left;
+					margin:25px 0 0 30px;
+					display:inline-block;
+					width:532px;
+					height:33px;
+					background:url("../images/sgo_icon.png") 0 -57px no-repeat;
+				}
+				p{
+					float:right;
+					display:inline-block;
+					font:72px/1.2 myFirstFont, $publicFont;
+					color:#fff;
+					margin-right:108px;
+				}
+			}
+			.bottom{
+				padding:32px 0;
+				margin-top:2px;
+				background:rgba(43,43,43,.8);
+				overflow:hidden;
+				height:auto;
+				>div{
+					float:left;
+				}
+				.user-login{
+					margin-left:40px;
+					.l{
+						float:left;
+						display:inline-block;
+						width:52px;
+						height:52px;
+						background:url("../images/sgo_icon.png") -270px 0 no-repeat;
+					}
+					label{
+						margin:6px 15px 0 15px;
+						float:left;
+						display:inline-block;
+						border-bottom:1px solid #fff;
+						font-size:0;
+						height:40px;
+						input{
+							background:none;
+							border:none;
+							outline:none;
+							width:100%;
+							height:100%;
+							font:18px/40 pxmyFirstFont, $publicFont;
+							color:#fff;
+							&::-webkit-input-placeholder{
+								font:18px/40 pxmyFirstFont, $publicFont;
+								color:#fff;
+							}
+						}
+					}
+					.r{
+						margin-top:10px;
+						float:left;
+						display:inline-block;
+						width:31px;
+						height:32px;
+						background:url("../images/sgo_icon.png") -326px 0 no-repeat;
+					}
+				}
+				.password{
+					margin-left:40px;
+					.l{
+						float:left;
+						display:inline-block;
+						width:52px;
+						height:52px;
+						background:url("../images/sgo_icon.png") -361px 0 no-repeat;
+					}
+					label{
+						margin:6px 15px 0 15px;
+						float:left;
+						display:inline-block;
+						border-bottom:1px solid #fff;
+						font-size:0;
+						height:40px;
+						input{
+							background:none;
+							border:none;
+							outline:none;
+							width:100%;
+							height:100%;
+							font:18px/40 pxmyFirstFont, $publicFont;
+							color:#fff;
+							&::-webkit-input-placeholder{
+								font:18px/40 pxmyFirstFont, $publicFont;
+								color:#fff;
+							}
+						}
+					}
+					.r{
+						margin-top:13px;
+						float:left;
+						display:inline-block;
+						width:25px;
+						height:25px;
+						background:url("../images/sgo_icon.png") -420px 0 no-repeat;
+					}
+				}
+				.btn{
+					margin-left:40px;
+					width:290px;
+					height:52px;
+					border-radius:5px;
+					@include box-shadow(0px 4px 0px #ff9602);
+					filter:alpha(opacity=100 finishopacity=50 style=1 startx=0,starty=0,finishx=0,finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=#ff8b52,endcolorstr=#f7ac20,gradientType=0);
+				    -ms-filter:alpha(opacity=100 finishopacity=50 style=1 startx=0,starty=0,finishx=0,finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=#ff8b52,endcolorstr=#f7ac20,gradientType=0);/*IE8*/	
+				    background:#f7ac20; /* 一些不支持背景渐变的浏览器 */  
+				    background:-moz-linear-gradient(top, #ff8b52, #f7ac20);  
+				    background:-webkit-gradient(linear, 0 0, 0 bottom, from(#ff8b52), to(#f7ac20));  
+				    background:-o-linear-gradient(top, #ff8b52, #f7ac20); 
+				    a{
+				    	display:block;
+				    	font:24px/54px pxmyFirstFont, $publicFont;
+						color:#fff;
+						text-align:center;
+				    }
+				}
+				.code{
+					margin-top:-32px;
+					float:right;
+					width:50px;
+					height:50px;
+					background:url("../images/sgo_icon.png") -450px 0 no-repeat;
+				}
+			}
+		}
+	}
+	.foot{
+	    float: right;
+	    overflow:hidden;
+		padding-right:104px;
+		#weather {
+			color:#FFF;
+			i { 
+				float:left;
+				display:inline-block;
+				background: no-repeat top left; 
+				font:30px/1 myFirstFont, $publicFont;
+				height:30px; 
+				line-height:30px; 
+				padding-left:36px; 
+				text-align:center; 
+				background-size: contain; 
+			}
+			i.icon-xiaoyu { background-image:url("../images/xiaoyu.png"); }
+			i.icon-zhongyu { background-image:url("../images/zhongyu.png"); }
+			i.icon-dayu { background-image:url("../images/dayu.png"); }
+			i.icon-qing { background-image:url("../images/qing.png"); }
+			i.icon-duoyun { background-image:url("../images/duoyun.png"); }
+			i.icon-yin { background-image:url("../images/yin.png"); }
+			p { 
+				float:left;
+				display:inline-block;
+				font:16px/30px myFirstFont, $publicFont;
+			}
+			p span { 
+				margin:0 10px; 
+			}
+		}	
+	}
+}
 .footer{
 	width:100%;
 	height:140px;
