@@ -6,42 +6,66 @@
 	<meta name=”description” content=""/>       
 	<meta name=”keywords” content=""/>      
 	<meta name=”author” content="name, bandow"/>         
-	<title>登录</title>
+	<title>系统</title>
 	<link rel="stylesheet" href="styles/login.css">
 </head>
 <body class="sgo-login">
-	<div class="warpper">
+	<div class="warpper warpper-systm">
 		<div class="header">
-			<div class="logo">
-				<div class="img"></div>
-			</div>
 			<div class="right">
 				<p><i></i><span id="date"></span><span id="week"></span><span id="time"></span></p>
 				<a class="setting" href=""></a>
 				<a class="close" href=""></a>
 			</div>
 		</div>
+		<div class="systm-logo">
+			<div class="img"></div>
+		</div>
 		<div class="login-content">
-			<div class="login-content-text">
+			<div class="login-content-text ststm-content-text">
 				<div class="head">
-					<p>HOTELSGO.CN</p>
 					<img src="images/title.png" alt="酒店营销套件">
 				</div>
-				<div class="middle">
-					<i class="arrow"></i>
-					<i class="cell"></i>
-					<div class="login">
-						<div class="top">
-							<i class="hotel"></i>
-							<i class="icon"></i>
-							<p>2018</p>
+				<div class="middle ststm-list">
+					<div class="left">
+						<ul>
+							<li>
+								<a href="#"><i class="i1"></i><p>ebooking</p></a>
+							</li>
+							<li>
+								<a href="#"><i class="i2"></i><p>PMS系统</p></a>
+							</li>
+							<li>
+								<a href="#"><i class="i3"></i><p>看家狗</p></a>
+							</li>
+							<li>
+								<a href="#"><i class="i4"></i><p>分成系统</p></a>
+							</li>
+							<li>
+								<a href="#"><i class="i5"></i><p>房价牌</p></a>
+							</li>
+							<li>
+								<a href="#"><i class="i6"></i><p>用户管理系统</p></a>
+							</li>
+							<li>
+								<a href="#"><i class="i7"></i><p>集团后台</p></a>
+							</li>
+							<li>
+								<a href="#"><i class="i8"></i><p>BI报表</p></a>
+							</li>
+							<li>
+								<a href="#"><i class="i9"></i><p>渠道管理</p></a>
+							</li>                                               
+						</ul>
+					</div>
+					<div class="right">
+						<div class="right-top">
+							<a href="">
+								<i class="user"></i>
+								<i class="arrow"></i>
+							</a>
 						</div>
-						<div class="bottom">
-							<div class="user-login"><i class="l"></i><label><input type="text" placeholder="用户名"></label><i class="r"></i></div>
-							<div class="password"><i class="l"></i><label><input type="password" placeholder="密码"></label><i class="r"></i></div>
-							<div class="btn"><a href="">登录</a></div>
-							<div class="code"></div>
-						</div>
+						<div class="right-bottom"></div>
 					</div>
 				</div>
 				<div class="foot">
@@ -50,52 +74,8 @@
 			</div>
 		</div>
 		<div class="footer">
-			<div class="footer-content">
-				<div class="left">
-					<div class="map-list">
-						<div class="logo"></div>
-						<div class="text">
-							<div class="phone-icon"></div>
-							<div class="content">
-								<p>7×24 客服电话</p>
-								<p>400-666-9699</p>
-							</div>
-						</div>
-						<div class="text">
-							<div class="download-icon"></div>
-							<div class="content">
-								<a href="">操作指引.pdf</a>
-								<a href="">谷歌浏览器.exe</a>
-							</div>
-						</div>
-						<div class="text">
-							<div class="cooperate-icon"></div>
-							<div class="content">
-								<a href="">商户合作</a>
-								<a href="">商家中心</a>
-							</div>
-						</div>
-						<div class="text">
-							<div class="about-icon"></div>
-							<div class="content">
-								<p><a href="">关于酒店狗</a><a href="">联系我们</a></p>
-								<a href="">招聘信息</a>
-							</div>
-						</div>
-					</div>
-					<p>©1999 - 2017 深圳市二十四度科技有限公司, Inc or its affiliates. All Rights R</p>
-				</div>
-				<div class="right">
-					<div class="code">
-						<p>酒店方专属</p>
-						<div class="img"><img src="images/QR_Code.jpg" alt=""></div>
-					</div>
-					<div class="code">
-						<p>微信预订</p>
-						<div class="img"><img src="images/QR_Code.jpg" alt=""></div>
-					</div>
-				</div>
-			</div>
+			<p>V1.0</p>
+			<p>©1999 - 2017 深圳市二十四度科技有限公司, Inc or its affiliates. All Rights Reserved. </p>
 		</div>
 	</div>
 </body>
@@ -107,11 +87,17 @@
 		var windowHeight=$(window).height();
 		var headerHeight=$(".header").height();
 		var footerHeight=$(".footer").height();
+		var systmLogoHeight=$(".systm-logo").height();
 		var loginContentTextHeight=$(".login-content-text").height();
-		var footerTop=windowHeight-headerHeight-footerHeight;
+		var footerTop=windowHeight-headerHeight-footerHeight-systmLogoHeight;
 		$(".warpper").height(windowHeight);
 		$(".login-content").css("height",footerTop);
-		$(".login-content-text").css("paddingTop",(footerTop-loginContentTextHeight)/2)
+		$(".login-content-text").css("paddingTop",(footerTop-loginContentTextHeight)/2);
+
+		$(".ststm-list .left ul li").on("click",function(){
+			$(this).addClass("active");
+		})
+
 		//运行时间
 		getMyTime();
 		//天气预报

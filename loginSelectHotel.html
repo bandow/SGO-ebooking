@@ -6,7 +6,7 @@
 	<meta name=”description” content=""/>       
 	<meta name=”keywords” content=""/>      
 	<meta name=”author” content="name, bandow"/>         
-	<title>登录</title>
+	<title>选择酒店</title>
 	<link rel="stylesheet" href="styles/login.css">
 </head>
 <body class="sgo-login">
@@ -21,31 +21,42 @@
 				<a class="close" href=""></a>
 			</div>
 		</div>
-		<div class="login-content">
-			<div class="login-content-text">
-				<div class="head">
-					<p>HOTELSGO.CN</p>
-					<img src="images/title.png" alt="酒店营销套件">
+		<div class="select-hotel-content">
+			<div class="select-hotel-content-text">
+				<div class="left">
+					<div class="l-top"></div>
+					<div class="l-bottom"></div>
 				</div>
-				<div class="middle">
-					<i class="arrow"></i>
-					<i class="cell"></i>
-					<div class="login">
-						<div class="top">
-							<i class="hotel"></i>
-							<i class="icon"></i>
-							<p>2018</p>
-						</div>
-						<div class="bottom">
-							<div class="user-login"><i class="l"></i><label><input type="text" placeholder="用户名"></label><i class="r"></i></div>
-							<div class="password"><i class="l"></i><label><input type="password" placeholder="密码"></label><i class="r"></i></div>
-							<div class="btn"><a href="">登录</a></div>
-							<div class="code"></div>
-						</div>
+				<div class="shct">
+					<div class="shct-top">
+						<p><i></i><span>请选择酒店</span></p>
+						<label>
+							<input type="text" placeholder="查找酒店"><i></i>
+						</label>
 					</div>
-				</div>
-				<div class="foot">
-					<div class="city" id="weather"><span>广州</span><span>晴间多云</span></div>
+					<div class="shct-bottom">
+						<div class="shct-bottom-content">
+							<div class="hote-list">
+								<ul>
+									<li><i></i><p>果然心动主题酒店江汉路店</p></li>
+									<li><i></i><p>鑫鑫旅社</p></li>
+									<li><i></i><p>新梦宾馆</p></li>
+									<li><i></i><p>武汉清宿酒店管理有限公司</p></li>
+									<li><i></i><p>武汉国伯绿地睿锦酒店</p></li>
+									<li><i></i><p>城市便捷武汉丁字路店</p></li>
+									<li><i></i><p>7天酒店武汉光谷广场地质大学店</p></li>
+									<li><i></i><p>果然心动主题酒店江汉路店</p></li>
+									<li><i></i><p>鑫鑫旅社</p></li>
+									<li><i></i><p>新梦宾馆</p></li>
+									<li><i></i><p>武汉清宿酒店管理有限公司</p></li>
+									<li><i></i><p>武汉国伯绿地睿锦酒店</p></li>
+									<li><i></i><p>城市便捷武汉丁字路店</p></li>
+									<li><i></i><p>7天酒店武汉光谷广场地质大学店</p></li>
+								</ul>
+							</div>
+						</div>
+						<div class="btn"><a href="">选择</a></div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -107,11 +118,16 @@
 		var windowHeight=$(window).height();
 		var headerHeight=$(".header").height();
 		var footerHeight=$(".footer").height();
-		var loginContentTextHeight=$(".login-content-text").height();
+		var loginContentTextHeight=$(".select-hotel-content-text").height();
 		var footerTop=windowHeight-headerHeight-footerHeight;
 		$(".warpper").height(windowHeight);
-		$(".login-content").css("height",footerTop);
-		$(".login-content-text").css("paddingTop",(footerTop-loginContentTextHeight)/2)
+		$(".select-hotel-content").css("height",footerTop);
+		$(".select-hotel-content-text").css("paddingTop",(footerTop-loginContentTextHeight)/2);
+
+		$(".shct .shct-bottom .hote-list ul li").on("click",function(){
+			$(this).addClass("active").siblings().removeClass("active");
+		});
+
 		//运行时间
 		getMyTime();
 		//天气预报

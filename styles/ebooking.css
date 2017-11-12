@@ -1,0 +1,498 @@
+@charset "UTF-8";
+/* =================================================================
+* Reset Style for PC
+* Author:雪丘行||Bandow
+* Author URI:http://www.unll123.com/
+* Date:2017-10-20
+* Version:0.0.1
+* ================================================================== */
+html {
+  font-family: Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, div, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  /*把所有元素的内边距和边框不再会增加它的宽度*/
+  -moz-box-sizing: border-box;
+  /* Firefox */
+  -webkit-box-sizing: border-box;
+  /* Safari */
+  box-sizing: border-box; }
+
+html body {
+  width: 100%;
+  height: 100%; }
+
+ol, ul {
+  /*去掉列表点*/
+  list-style: none; }
+
+table {
+  /*去掉表格的双行线*/
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*取消a标签在移动端点击时的背景颜色*/
+a, a:hover, a:active, a:visited, a:link, a:focus {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  background: none;
+  text-decoration: none; }
+
+@font-face {
+  font-family: myFirstFont;
+  src: url("../font/hiragino.otf"); }
+body, #wrapper, html {
+  height: 100%; }
+
+#wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #f5f5f5; }
+
+.warpper .nav {
+  position: fixed;
+  z-index: 2001;
+  width: 122px;
+  height: 100%;
+  background-color: #58595b; }
+  .warpper .nav .nav-content {
+    overflow: hidden; }
+  .warpper .nav .logo {
+    padding: 12px 0 0 34px;
+    width: 100%;
+    height: 61px;
+    background-color: #2b2b2b; }
+.warpper .sidebar-collapse {
+  background-color: #58595b; }
+  .warpper .sidebar-collapse ul li {
+    padding-left: 10px;
+    width: 100%;
+    height: 47px;
+    border-bottom: 1px solid #4e4f51; }
+    .warpper .sidebar-collapse ul li a {
+      font: 14px/48px myFirstFont, Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+      color: #fff;
+      text-decoration: none;
+      display: block; }
+    .warpper .sidebar-collapse ul li i {
+      float: left;
+      margin-top: 10px;
+      display: inline-block;
+      width: 26px;
+      height: 26px;
+      background: url("../images/left_icon.png") no-repeat; }
+    .warpper .sidebar-collapse ul li i.i1 {
+      background-position: 0 2px; }
+    .warpper .sidebar-collapse ul li i.i2 {
+      background-position: 0 -45px; }
+    .warpper .sidebar-collapse ul li i.i3 {
+      background-position: 0 -94px; }
+    .warpper .sidebar-collapse ul li i.i4 {
+      background-position: 0 -142px; }
+    .warpper .sidebar-collapse ul li i.i5 {
+      background-position: 0 -189px; }
+    .warpper .sidebar-collapse ul li i.i6 {
+      background-position: 0 -237px; }
+    .warpper .sidebar-collapse ul li i.i7 {
+      background-position: 0 -285px; }
+    .warpper .sidebar-collapse ul li i.i8 {
+      background-position: 0 -333px; }
+    .warpper .sidebar-collapse ul li i.i9 {
+      background-position: 0 -381px; }
+    .warpper .sidebar-collapse ul li i.i10 {
+      background-position: 0 -428px; }
+    .warpper .sidebar-collapse ul li i.i11 {
+      background-position: 0 -477px; }
+    .warpper .sidebar-collapse ul li i.i12 {
+      background-position: 0 -524px; }
+    .warpper .sidebar-collapse ul li i.i13 {
+      background-position: 0 -572px; }
+    .warpper .sidebar-collapse ul li span {
+      margin-left: 8px; }
+  .warpper .sidebar-collapse ul li.active {
+    position: relative;
+    background-color: #f5f5f5; }
+    .warpper .sidebar-collapse ul li.active:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 46px;
+      background-color: #f6ac1d; }
+    .warpper .sidebar-collapse ul li.active a {
+      color: #747474; }
+    .warpper .sidebar-collapse ul li.active i.i1 {
+      background-position: -27px 2px; }
+    .warpper .sidebar-collapse ul li.active i.i2 {
+      background-position: -27px -45px; }
+    .warpper .sidebar-collapse ul li.active i.i3 {
+      background-position: -27px -94px; }
+    .warpper .sidebar-collapse ul li.active i.i4 {
+      background-position: -27px -142px; }
+    .warpper .sidebar-collapse ul li.active i.i5 {
+      background-position: -27px -189px; }
+    .warpper .sidebar-collapse ul li.active i.i6 {
+      background-position: -27px -237px; }
+    .warpper .sidebar-collapse ul li.active i.i7 {
+      background-position: -27px -285px; }
+    .warpper .sidebar-collapse ul li.active i.i8 {
+      background-position: -27px -333px; }
+    .warpper .sidebar-collapse ul li.active i.i9 {
+      background-position: -27px -381px; }
+    .warpper .sidebar-collapse ul li.active i.i10 {
+      background-position: -27px -428px; }
+    .warpper .sidebar-collapse ul li.active i.i11 {
+      background-position: -27px -477px; }
+    .warpper .sidebar-collapse ul li.active i.i12 {
+      background-position: -27px -524px; }
+    .warpper .sidebar-collapse ul li.active i.i13 {
+      background-position: -27px -572px; }
+
+#page-wrapper {
+  padding: 0;
+  position: inherit;
+  margin: 0 0 0 122px; }
+  #page-wrapper .header-nav {
+    height: 61px;
+    background-color: #58595b; }
+    #page-wrapper .header-nav .nav-right {
+      float: right;
+      overflow: hidden; }
+      #page-wrapper .header-nav .nav-right > a {
+        float: left;
+        margin-left: 20px; }
+      #page-wrapper .header-nav .nav-right .room {
+        padding-right: 5px;
+        margin-right: 20px;
+        font: 14px/61px myFirstFont, Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+        color: #fff; }
+      #page-wrapper .header-nav .nav-right .user span {
+        float: left;
+        font: 14px/61px myFirstFont, Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+        color: #fff; }
+      #page-wrapper .header-nav .nav-right .user i {
+        margin: 10px 0 0 15px;
+        float: left;
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        font-size: 0;
+        border-radius: 100%;
+        overflow: hidden; }
+      #page-wrapper .header-nav .nav-right .quit {
+        margin: 20px 0 0 20px;
+        width: 19px;
+        height: 18px;
+        background: url("../images/ebooking_icon.png") no-repeat; }
+      #page-wrapper .header-nav .nav-right .go-online {
+        padding: 12px 20px 0;
+        height: 61px;
+        background-color: #f6ac1d; }
+        #page-wrapper .header-nav .nav-right .go-online p {
+          font: 14px/1.2 myFirstFont, Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+          color: #58595b; }
+        #page-wrapper .header-nav .nav-right .go-online i {
+          margin: 0 auto;
+          display: block;
+          width: 22px;
+          height: 22px;
+          background: url("../images/ebooking_icon.png") -24px 0 no-repeat; }
+  #page-wrapper #content-main {
+    padding: 20px 0;
+    overflow: hidden; }
+  #page-wrapper .footer {
+    overflow: hidden;
+    padding: 10px 20px;
+    height: 36px; }
+    #page-wrapper .footer p {
+      font: 12px/1.2 myFirstFont, Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+      color: #747474;
+      text-align: right; }
+
+.row {
+  margin-right: -30px;
+  margin-left: 0; }
+
+.arrow-left {
+  position: relative; }
+  .arrow-left:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    width: 10px;
+    height: 10px;
+    border: 1px solid;
+    border-bottom: 0;
+    border-right: 0;
+    margin-top: -5px;
+    color: #333;
+    -webkit-transform: rotateZ(-45deg);
+    transform: rotateZ(-45deg); }
+
+.arrow-bottom {
+  position: relative; }
+  .arrow-bottom:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    width: 6px;
+    height: 6px;
+    border: 1px solid;
+    border-bottom: 0;
+    border-right: 0;
+    margin-top: -6px;
+    color: #f6ac1d;
+    -moz-transform: rotateZ(-135deg);
+    -o-transform: rotateZ(-135deg);
+    -ms-transform: rotateZ(-135deg);
+    -webkit-transform: rotateZ(-135deg);
+    transform: rotateZ(-135deg); }
+
+.title {
+  width: 1100px;
+  height: auto;
+  margin: 0 auto; }
+  .title .left {
+    margin-left: -55px; }
+  .title i {
+    margin: 9px 0 0 0;
+    float: left;
+    display: inline-block;
+    width: 31px;
+    height: 31px;
+    background: url("../images/ebooking_icon.png") -51px 0 no-repeat; }
+  .title h2 {
+    margin-left: 55px;
+    font: 30px/48px myFirstFont, Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+    color: #58595b; }
+
+.item {
+  margin: 20px auto 0;
+  width: 1100px;
+  overflow: hidden; }
+  .item h3 {
+    font: 24px/48px myFirstFont, Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+    color: #58595b; }
+  .item .item-list {
+    float: left; }
+  .item .item-list-text {
+    float: left;
+    margin-left: 44px;
+    width: 337px;
+    height: 350px;
+    background-color: #fff;
+    -moz-box-shadow: 1px 3px 5px #eff0f1;
+    -webkit-box-shadow: 1px 3px 5px #eff0f1;
+    box-shadow: 1px 3px 5px #eff0f1; }
+    .item .item-list-text .img {
+      padding: 20px 0;
+      height: 95px;
+      border-bottom: 1px solid #ddd;
+      text-align: center; }
+      .item .item-list-text .img > i {
+        display: inline-block;
+        background: url("../images/ebooking_icon.png") no-repeat; }
+    .item .item-list-text .line {
+      padding: 10px 0 0 10px; }
+      .item .item-list-text .line i {
+        float: left;
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        background: url("../images/ebooking_icon.png") no-repeat; }
+      .item .item-list-text .line i.i1 {
+        background-position: -235px 0; }
+      .item .item-list-text .line i.i2 {
+        background-position: -342px 0; }
+      .item .item-list-text .line i.i3 {
+        background-position: -270px 0; }
+      .item .item-list-text .line i.i4 {
+        background-position: -342px 0; }
+      .item .item-list-text .line i.i5 {
+        background-position: -379px 0; }
+      .item .item-list-text .line i.i6 {
+        background-position: -306px 0; }
+      .item .item-list-text .line .r {
+        padding-bottom: 10px;
+        overflow: hidden;
+        margin-left: 40px;
+        border-bottom: 1px solid #ddd; }
+        .item .item-list-text .line .r span {
+          float: right;
+          padding-right: 10px;
+          font: 14px/1.5 myFirstFont, Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif; }
+          .item .item-list-text .line .r span strong {
+            font-size: 40px; }
+      .item .item-list-text .line .middle {
+        float: left; }
+        .item .item-list-text .line .middle .line-div {
+          width: 152px;
+          height: 10px;
+          border-radius: 30px;
+          background-color: #e0e0e0; }
+          .item .item-list-text .line .middle .line-div .progress {
+            height: 100%;
+            border-radius: 30px;
+            background-color: #f6ac1d; }
+        .item .item-list-text .line .middle p {
+          font: 14px/32px myFirstFont, Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+          color: #58595b; }
+    .item .item-list-text .line3 .r {
+      border-bottom: none; }
+  .item .item1 {
+    margin-left: 0; }
+    .item .item1 .img > i {
+      width: 42px;
+      height: 50px;
+      background-position: -88px 0; }
+  .item .item2 .img > i {
+    width: 51px;
+    height: 41px;
+    background-position: -133px 0; }
+  .item .item3 .img > i {
+    width: 40px;
+    height: 40px;
+    background-position: -189px 0; }
+
+.today-order-content {
+  padding: 20px;
+  float: left;
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  -moz-box-shadow: 1px 3px 5px #eff0f1;
+  -webkit-box-shadow: 1px 3px 5px #eff0f1;
+  box-shadow: 1px 3px 5px #eff0f1;
+  overflow: hidden; }
+  .today-order-content .l {
+    float: left;
+    overflow: hidden;
+    padding-right: 40px;
+    border-right: 1px solid #ddd; }
+    .today-order-content .l i {
+      margin-top: 31px;
+      float: left;
+      display: inline-block;
+      width: 66px;
+      height: 66px;
+      background: url("../images/ebooking_icon.png") 0 -53px no-repeat; }
+    .today-order-content .l .date {
+      margin-left: 30px;
+      float: left;
+      background-color: #e0e0e0;
+      border-radius: 5px; }
+      .today-order-content .l .date p {
+        padding: 0 10px;
+        font: 18px/2 myFirstFont, Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+        color: #2b2b2b; }
+        .today-order-content .l .date p .week {
+          margin-left: 30px; }
+      .today-order-content .l .date .time {
+        font: 60px/1.5 myFirstFont, Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+        color: #f6ac1d;
+        text-align: center;
+        background-color: #fef7e8; }
+  .today-order-content .r {
+    float: left;
+    overflow: hidden; }
+    .today-order-content .r .r-item {
+      float: left;
+      margin-left: 70px;
+      overflow: hidden; }
+      .today-order-content .r .r-item i {
+        margin-top: 31px;
+        float: left;
+        width: 66px;
+        height: 66px;
+        background: url("../images/ebooking_icon.png") no-repeat; }
+      .today-order-content .r .r-item i.r1 {
+        background-position: -73px -53px; }
+      .today-order-content .r .r-item i.r2 {
+        background-position: -148px -53px; }
+      .today-order-content .r .r-item i.r3 {
+        background-position: -224px -53px; }
+      .today-order-content .r .r-item .text {
+        float: left; }
+        .today-order-content .r .r-item .text h4 {
+          font: 18px/1.5 myFirstFont, Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+          color: #58595b; }
+        .today-order-content .r .r-item .text p {
+          font: 36px/2 myFirstFont, Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+          color: #58595b;
+          text-align: center; }
+
+.user-develop {
+  padding: 20px;
+  float: left;
+  width: 720px;
+  height: auto;
+  background-color: #fff;
+  -moz-box-shadow: 1px 3px 5px #eff0f1;
+  -webkit-box-shadow: 1px 3px 5px #eff0f1;
+  box-shadow: 1px 3px 5px #eff0f1;
+  overflow: hidden; }
+  .user-develop .u-item {
+    float: left;
+    overflow: hidden; }
+    .user-develop .u-item i {
+      float: left;
+      margin-top: 31px;
+      float: left;
+      width: 66px;
+      height: 66px;
+      background: url("../images/ebooking_icon.png") -224px -53px no-repeat; }
+    .user-develop .u-item .text {
+      float: left;
+      margin-left: 50px; }
+      .user-develop .u-item .text h4 {
+        font: 18px/1.5 myFirstFont, Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+        color: #58595b; }
+      .user-develop .u-item .text p {
+        font: 36px/2 myFirstFont, Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+        color: #58595b;
+        text-align: center; }
+  .user-develop .r-img {
+    float: left;
+    margin-left: 50px;
+    font: 18px/1.5 myFirstFont, Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+    color: #58595b; }
+
+.go-back {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 64px;
+  height: 64px;
+  background-color: #fff;
+  border-radius: 100%;
+  text-align: center;
+  cursor: pointer; }
+  .go-back i {
+    margin-top: 18px;
+    display: inline-block;
+    width: 38px;
+    height: 28px;
+    background: url("../images/ebooking_icon.png") -416px 0 no-repeat; }
+
+/*# sourceMappingURL=ebooking.css.map */
