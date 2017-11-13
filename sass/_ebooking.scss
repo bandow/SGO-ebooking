@@ -19,7 +19,7 @@ body, #wrapper, html {
 	    height:100%;
 	    background-color:#58595b;
 	    .nav-content{
-	    	overflow: hidden;
+	    	// overflow: hidden;
 	    }
 	    .logo{
 	    	padding:12px 0 0 34px;
@@ -31,6 +31,7 @@ body, #wrapper, html {
 	.sidebar-collapse{
 		background-color:#58595b;
 		ul li{
+			position:relative;
 			padding-left:10px;
 			width:100%;
 			height:47px;
@@ -40,6 +41,34 @@ body, #wrapper, html {
 				color:#fff;
 				text-decoration:none;
 				display:block;
+			}
+			.list{
+				position:absolute;
+				top:0;
+				left:122px;
+				z-index:1;
+				display:none;
+				dl dd{
+					width:122px;
+					height:47px;
+					border:1px solid #eee;
+					border-left:0;
+					border-top:0;
+					background:rgba(245,245,245,.79);
+					&:first-child{
+						border-top:1px solid #eee;
+					}
+					a{
+						display: block;
+						text-align: center;
+						text-decoration: none;
+						font:14px/48px myFirstFont, $publicFont;
+						color:#58595b;
+					}
+				}
+				dl dd.active{
+					a{color:#f6ac1d;}
+				}
 			}
 			i{
 				float:left;
@@ -95,6 +124,9 @@ body, #wrapper, html {
 		ul li.active{
 			position:relative;
 			background-color:#f5f5f5;
+			.list{
+				display:block;
+			}
 			&:before{
 				content: "";
 				position:absolute;
@@ -230,22 +262,22 @@ body, #wrapper, html {
     margin-right: -30px;
     margin-left: 0;
 }
-.arrow-left {
+.arrow-right {
     position:relative;
     &:after {
 	    content: '';
 	    position: absolute;
 	    top:50%;
-	    left:3px;
+	    right:8px;
 	    width:10px;
 	    height:10px;
 	    border:1px solid;
 	    border-bottom: 0;
 	    border-right: 0;
 	    margin-top: -5px;
-	    color: #333;
-	    -webkit-transform: rotateZ(-45deg);
-	    transform: rotateZ(-45deg)
+	    color: #fff;
+	    -webkit-transform: rotateZ(135deg);
+	    transform: rotateZ(135deg)
 	}
 }
 .arrow-bottom {
@@ -542,4 +574,161 @@ body, #wrapper, html {
 		height:28px;
 		background:url("../images/ebooking_icon.png") -416px 0 no-repeat;
 	}
+}
+.udiv{
+	overflow:hidden;
+	height: 1px;
+    width: 100%;
+}
+.order-title{
+	i{
+	    margin:10px 0 0 0;
+	    float: left;
+	    display: inline-block;
+	    width:27px;
+	    height:28px;
+	    background: url(../images/ebooking_icon.png) -473px 0 no-repeat;
+	}
+	h2{
+		float:left;
+		margin-left:15px;
+	}
+	ul{
+		float:left;
+		li{
+			margin:6px 0  6px 30px;
+			float:left;
+			font:18px/36px myFirstFont, $publicFont;
+			color:#58595b;
+		}
+		li.active{
+			border-bottom:solid 3px;
+			color:#f6ac1d;
+		}
+	}
+}
+.order-search{
+	padding:10px 30px;
+	margin:20px auto 0;
+	width:1100px;
+    overflow: hidden;
+    background:#fff;
+    @include box-shadow(1px 3px 5px #eff0f1);
+    ul{
+    	padding-top:20px;
+    	float:left;
+    	overflow: hidden;
+		li{
+	    	float:left;
+	    	overflow: hidden;
+	    	padding-right:20px;
+	    	margin-right:20px;
+	    	border-right:1px solid #ddd;
+	    	&:last-child{
+	    		border-right:0;
+	    	}
+	    	p{
+	    		float:left;
+				display:inline-block;
+				font:18px/30px myFirstFont, $publicFont;
+				color:#58595b;
+				margin-right:20px;
+	    	}
+	    	label{
+	    		padding:0 10px;
+	    		float:left;
+				display:inline-block;
+				width:138px;
+				height:28px;
+				border:1px solid #ddd;
+				border-radius:5px;
+				font-size:0;
+				background-color:#f5f5f5;
+				input,select{
+					width:100%;
+					height:100%;
+					background:none;
+					border:none;
+					outline:none;
+					font:14px/1.2 myFirstFont, $publicFont;
+					color:#58595b;
+				}
+	    	}
+	    }
+    }
+    .btn{
+    	float:right;
+    	width:161px;
+    	height:66px;
+    	background: url(../images/ebooking_icon.png) 0 -124px no-repeat;
+    }
+}
+.table{
+	padding-bottom:66px;
+	margin:30px auto 0;
+	width:1100px;
+    overflow: hidden;
+    background:#fff;
+    @include box-shadow(1px 3px 5px #eff0f1);
+    table{
+    	width:100%;
+    	thead{
+    		td{
+    			padding:15px 0;
+    			font:18px/36px myFirstFont, $publicFont;
+				color:#58595b;
+				&:nth-child(1){
+					text-align:center;
+				}
+				&:last-child{
+					text-align:center;
+				}
+    		}
+    	}
+    	tbody{
+    		tr{
+    			&:nth-child(2n+1){
+    				border-top:1px solid #ddd;
+    				border-bottom:1px solid #ddd;
+    				background-color:#fef7e8;
+    			}
+    			td{
+    				font:14px/30px myFirstFont, $publicFont;
+					color:#58595b;
+    				padding:15px 0;
+    				&:nth-child(1){
+    					text-align:center;
+    				}
+					&:last-child{
+						text-align:center;
+					}
+					p{
+						i{
+							margin-right:5px;
+							display: inline-block;
+							background: url(../images/ebooking_icon.png) no-repeat;
+						}
+						i.i1{width:13px;height:13px;background-position:-366px -52px}
+						i.i2{width:11px;height:11px;background-position:-415px -52px}
+						i.i3{width:13px;height:13px;background-position:-382px -52px}
+						i.i4{width:13px;height:13px;background-position:-428px -52px}
+						i.i5{width:13px;height:12px;background-position:-444px -52px}
+						i.i6{width:13px;height:12px;background-position:-398px -52px}
+						i.i7{width:13px;height:13px;background-position:-424px -52px}
+						i.i8{width:13px;height:12px;background-position:-474px -52px}
+						span{}
+						a{
+							&:first-child{
+								color:#f6ac1e;
+							}
+							&:last-child{
+								margin-left:20px;
+								color:#ff8b52;
+							}
+						}
+					}
+    			}
+    		}
+    	}
+    }
 }

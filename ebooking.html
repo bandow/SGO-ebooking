@@ -19,17 +19,26 @@
 					<ul>
 						<li><a href="javascript:;" data-index="ebooking-v1.html"><i class="i1"></i><span>工作台</span></a></li>
 						<li><a href="javascript:;" data-index="ebooking-v2.html"><i class="i2"></i><span>酒店信息</span></a></li>
-						<li><a href="javascript:;" data-index="3"><i class="i3"></i><span>营销工具</span></a></li>
+						<li class="arrow-right">
+							<a href="javascript:;" data-index="3"><i class="i3"></i><span>营销工具</span></a>
+							<div class="list">
+								<dl>
+									<dd><a href="javascript:;" data-id="ebooking-v2.html">优惠券模版</a></dd>
+									<dd><a href="javascript:;" data-id="ebooking-v2.html">活动管理</a></dd>
+									<dd><a href="javascript:;" data-id="ebooking-v2.html">刷点评</a></dd>
+								</dl>
+							</div>
+						</li>
 						<li><a href="javascript:;" data-index="4"><i class="i4"></i><span>房型管理</span></a></li>
 						<li><a href="javascript:;" data-index="5"><i class="i5"></i><span>房量管理</span></a></li>
 						<li><a href="javascript:;" data-index="6"><i class="i6"></i><span>价格管理</span></a></li>
 						<li><a href="javascript:;" data-index="7"><i class="i7"></i><span>酒店订单</span></a></li>
 						<li><a href="javascript:;" data-index="8"><i class="i8"></i><span>图片管理</span></a></li>
-						<li><a href="javascript:;" data-index="9"><i class="i9"></i><span>会员管理</span></a></li>
+						<li  class="arrow-right"><a href="javascript:;" data-index="9"><i class="i9"></i><span>会员管理</span></a></li>
 						<li><a href="javascript:;" data-index="10"><i class="i10"></i><span>点评管理</span></a></li>
 						<li><a href="javascript:;" data-index="11"><i class="i11"></i><span>二维码</span></a></li>
 						<li><a href="javascript:;" data-index="12"><i class="i12"></i><span>帐户安全</span></a></li>
-						<li><a href="javascript:;" data-index="13"><i class="i13"></i><span>报表</span></a></li>
+						<li class="arrow-right"><a href="javascript:;" data-index="13"><i class="i13"></i><span>报表</span></a></li>
 					</ul>
 				</div>
 			</div>
@@ -73,11 +82,23 @@
         $(".sidebar-collapse ul li").on("mouseover",function(){
         	$(this).addClass("active").siblings().removeClass("active");
         })
-
+        $(".sidebar-collapse ul li").on("mouseout",function(){
+        	$(this).removeClass("active");
+        })
 
         $(".sidebar-collapse ul li").on("click",function(){
         	var dataIndex=$(this).find("a").attr('data-index');
         	$("#content-main iframe").attr("src",dataIndex);
+        })
+
+        $(".warpper .sidebar-collapse ul li .list dl dd").on("mouseover",function(){
+        	$(this).addClass("active").siblings().removeClass("active");
+        })
+
+        $(".warpper .sidebar-collapse ul li .list dl dd").on("click",function(e){
+        	e.stopPropagation();
+        	var dataId=$(this).find("a").attr('data-id');
+        	$("#content-main iframe").attr("src",dataId);
         })
 
   
