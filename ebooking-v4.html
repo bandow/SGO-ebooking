@@ -8,6 +8,55 @@
     <meta name=”author” content="name, bandow"/>         
     <title></title>
     <link rel="stylesheet" href="styles/ebooking.css">
+    <link rel="stylesheet" href="plugins/swiper/swiper-3.4.2.min.css">
+    <style>
+        .swiper-container{float:left;padding:20px 0;width: 640px;margin: 0 40px;}
+        .swiper-container .swiper-slide{color:#58595b;cursor: pointer;text-align:center;}
+        .swiper-container .swiper-slide.active{color:#f6ac1d; border-bottom:2px solid #f6ac1d; padding-bottom:10px;}
+        .swiper-button-prev,.swiper-button-next{background:none;}
+        .swiper-button-prev:after{
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 8px;
+            width: 10px;
+            height: 10px;
+            border: 1px solid;
+            border-bottom: 0;
+            border-right: 0;
+            margin-top: -5px;
+            color: #f6ac1d;
+            -webkit-transform: rotateZ(-45deg);
+            transform: rotateZ(-45deg);
+        }
+        .swiper-button-prev.swiper-button-disabled:after{
+            color:#999;
+        }
+        .swiper-button-next:after{
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 8px;
+            width: 10px;
+            height: 10px;
+            border: 1px solid;
+            border-bottom: 0;
+            border-right: 0;
+            margin-top: -5px;
+            color: #f6ac1d;
+            -webkit-transform: rotateZ(135deg);
+            transform: rotateZ(135deg);
+        }
+        .swiper-button-next.swiper-button-disabled:after{
+            color:#999;
+        }
+        .swiper-button-next, .swiper-button-prev{
+            top:32px;
+        }
+        .swiper-button-prev{
+            left:40px;
+        }
+    </style>
 </head>
 <body style="background-color:#f5f5f5;">                 
     <div class="title price-title">
@@ -18,75 +67,300 @@
     </div>
     <div class="udiv"></div>
     <div class="price-search">
-        <div class="events-search-list">
-            <ul>
-                <li>
-                    <p>批次</p>
-                    <label><input type="text" value="" placeholder="批次号"></label>
-                </li>
-                <li>
-                    <p>状态</p>
-                    <label>
-                        <select>
-                            <option>有效</option>
-                            <option>过期</option>
-                        </select>
-                    </label>
-                </li>
-            </ul>
-        </div>
-        <div class="events-search-list">
-            <ul>
-                <li>
-                    <p>名称</p>
-                    <label><input type="text" value="" placeholder="名称"></label>
-                </li>
-                <li>
-                    <p>类型</p>
-                    <label>
-                        <select>
-                            <option>所有</option>
-                            <option>1</option>
-                        </select>
-                    </label>
-                </li>
-            </ul>
-        </div>
-        <div class="events-search-list">
-            <ul class="date-list">
-                <li>
-                    <p>创建时间</p>
-                    <div class="date">
-                        <label>
-                            <select>
-                                <option>2017.10.09</option>
-                                <option>1</option>
-                            </select>
-                        </label>
-                        <p>~</p>
-                        <label>
-                            <select>
-                                <option>2017.10.18</option>
-                                <option>1</option>
-                            </select>
-                        </label>
+        <div class="l">
+            <div class="top">
+                <i></i>
+                <div class="top-left">
+                    <ul>
+                        <li>
+                            <p>开始日期</p>
+                             <label>
+                                <select>
+                                    <option>2017.11.09</option>
+                                    <option>2017.11.09</option>
+                                </select>
+                            </label>
+                        </li>
+                        <li>
+                            <p>结束日期</p>
+                            <label>
+                                <select>
+                                    <option>2017.11.09</option>
+                                    <option>2017.11.09</option>
+                                </select>
+                            </label>
+                        </li>
+                    </ul>
+                    <a href="javascript:;" class="btn" alt="查询"></a>
+                </div>
+            </div>
+            <div class="bottom">
+                <i></i>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">清雅大床房</div>
+                        <div class="swiper-slide">清雅双床房</div>
+                        <div class="swiper-slide">清雅圆床房</div>
+                        <div class="swiper-slide">莉馨大床房</div>
+                        <div class="swiper-slide">莉馨双床房</div>
+                        <div class="swiper-slide">商务大床房</div>
+                        <div class="swiper-slide">商务大床棋</div>
                     </div>
-                </li>
-            </ul>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
         </div>
-        <a href="javascript:;" class="btn" alt="查询"></a>
-        <div class="add-active">
+        <div class="settings">
             <i></i>
             <a href="javascript:;" class="add-active-btn" alt="添加活动"></a>
         </div>
     </div>
-
+    <div class="date-list">
+        <ul>
+            <li>
+                <div class="t">
+                    <div class="t-com">
+                        <div class="l">
+                            <p>2017.10</p>
+                            <p>星期一</p>
+                        </div>
+                        <div class="r">
+                            <h2>30</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="b">
+                    <p>酒店狗预订价<span class="price-num">288</span></p>
+                    <p>铂金会员价<span>306</span></p>
+                    <p>金卡会员价<span>316</span></p>
+                </div>
+            </li>
+            <li>
+                <div class="t t-active">
+                    <div class="t-com">
+                        <div class="l">
+                            <p>2017.10</p>
+                            <p>星期一</p>
+                        </div>
+                        <div class="r">
+                            <h2>30</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="b">
+                    <p>酒店狗预订价<span class="price-num">288</span></p>
+                    <p>铂金会员价<span>306</span></p>
+                    <p>金卡会员价<span>316</span></p>
+                </div>
+            </li>
+            <li>
+                <div class="t">
+                    <div class="t-com">
+                        <div class="l">
+                            <p>2017.10</p>
+                            <p>星期一</p>
+                        </div>
+                        <div class="r">
+                            <h2>30</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="b">
+                    <p>酒店狗预订价<span class="price-num">288</span></p>
+                    <p>铂金会员价<span>306</span></p>
+                    <p>金卡会员价<span>316</span></p>
+                </div>
+            </li>
+            <li>
+                <div class="t">
+                    <div class="t-com">
+                        <div class="l">
+                            <p>2017.10</p>
+                            <p>星期一</p>
+                        </div>
+                        <div class="r">
+                            <h2>30</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="b">
+                    <p>酒店狗预订价<span class="price-num">288</span></p>
+                    <p>铂金会员价<span>306</span></p>
+                    <p>金卡会员价<span>316</span></p>
+                </div>
+            </li>
+            <li>
+                <div class="t">
+                    <div class="t-com">
+                        <div class="l">
+                            <p>2017.10</p>
+                            <p>星期一</p>
+                        </div>
+                        <div class="r">
+                            <h2>30</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="b">
+                    <p>酒店狗预订价<span class="price-num">288</span></p>
+                    <p>铂金会员价<span>306</span></p>
+                    <p>金卡会员价<span>316</span></p>
+                </div>
+            </li>
+            <li>
+                <div class="t">
+                    <div class="hot">周末</div>
+                    <div class="t-com">
+                        <div class="l">
+                            <p>2017.10</p>
+                            <p>星期一</p>
+                        </div>
+                        <div class="r">
+                            <h2>30</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="b">
+                    <p>酒店狗预订价<span class="price-num">288</span></p>
+                    <p>铂金会员价<span>306</span></p>
+                    <p>金卡会员价<span>316</span></p>
+                </div>
+            </li>
+            <li>
+                <div class="t">
+                    <div class="t-com">
+                        <div class="l">
+                            <p>2017.10</p>
+                            <p>星期一</p>
+                        </div>
+                        <div class="r">
+                            <h2>30</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="b">
+                    <p>酒店狗预订价<span class="price-num">288</span></p>
+                    <p>铂金会员价<span>306</span></p>
+                    <p>金卡会员价<span>316</span></p>
+                </div>
+            </li>
+            <li>
+                <div class="t">
+                    <div class="t-com">
+                        <div class="l">
+                            <p>2017.10</p>
+                            <p>星期一</p>
+                        </div>
+                        <div class="r">
+                            <h2>30</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="b">
+                    <p>酒店狗预订价<span class="price-num">288</span></p>
+                    <p>铂金会员价<span>306</span></p>
+                    <p>金卡会员价<span>316</span></p>
+                </div>
+            </li>
+            <li>
+                <div class="t">
+                    <div class="t-com">
+                        <div class="l">
+                            <p>2017.10</p>
+                            <p>星期一</p>
+                        </div>
+                        <div class="r">
+                            <h2>30</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="b">
+                    <p>酒店狗预订价<span class="price-num">288</span></p>
+                    <p>铂金会员价<span>306</span></p>
+                    <p>金卡会员价<span>316</span></p>
+                </div>
+            </li>
+            <li>
+                <div class="t">
+                    <div class="t-com">
+                        <div class="l">
+                            <p>2017.10</p>
+                            <p>星期一</p>
+                        </div>
+                        <div class="r">
+                            <h2>30</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="b">
+                    <p>酒店狗预订价<span class="price-num">288</span></p>
+                    <p>铂金会员价<span>306</span></p>
+                    <p>金卡会员价<span>316</span></p>
+                </div>
+            </li>
+            <li>
+                <div class="t">
+                    <div class="t-com">
+                        <div class="l">
+                            <p>2017.10</p>
+                            <p>星期一</p>
+                        </div>
+                        <div class="r">
+                            <h2>30</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="b">
+                    <p>酒店狗预订价<span class="price-num">288</span></p>
+                    <p>铂金会员价<span>306</span></p>
+                    <p>金卡会员价<span>316</span></p>
+                </div>
+            </li>
+            <li>
+                <div class="t">
+                    <div class="t-com">
+                        <div class="l">
+                            <p>2017.10</p>
+                            <p>星期一</p>
+                        </div>
+                        <div class="r">
+                            <h2>30</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="b">
+                    <p>酒店狗预订价<span class="price-num">288</span></p>
+                    <p>铂金会员价<span>306</span></p>
+                    <p>金卡会员价<span>316</span></p>
+                </div>
+            </li>
+        </ul>
+        <div class="date-list-num">
+            <dl>
+                <dd>01</dd>
+                <dd>02</dd>
+                <dd>03</dd>
+                <dd>04</dd>
+                <dd class="active">05</dd>
+                <dd>06</dd>
+                <dd>07</dd>
+                <dd>08</dd>
+                <dd>09</dd>
+                <dd>10</dd>
+                <dd>11</dd>
+                <dd>12</dd>
+            </dl>
+        </div>
+    </div>
+    <div class="udiv"></div>
     <div class="go-back" id="goto-top">
         <i></i>
     </div>
 </body>
 <!-- script begin -->
 <script src="plugins/jquery/jquery.min.js"></script>
+<script src="plugins/swiper/swiper-3.4.2.min.js"></script>
 <script>
     $(function(){
         //置顶
@@ -101,12 +375,18 @@
             },200);
         });
 
-        $(".order-title ul li").on("click",function(){
+        $(".date-list .date-list-num dl dd").on("click",function(){
             $(this).addClass("active").siblings().removeClass("active");
-            $(".table-all .table-list").eq($(this).index()).show().siblings().hide();
         })
 
-        $(".page .num").on("click",function(){
+        var mySwiper = new Swiper('.swiper-container',{
+            prevButton:'.swiper-button-prev',
+            nextButton:'.swiper-button-next',
+            slidesPerView :6.5,
+            spaceBetween : 20,
+        })
+
+        $(".swiper-container .swiper-slide").on("click",function(){
             $(this).addClass("active").siblings().removeClass("active");
         })
     })
