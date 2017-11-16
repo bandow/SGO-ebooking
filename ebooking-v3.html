@@ -59,7 +59,7 @@
             </ul>
         </div>
         <div class="events-search-list">
-            <ul class="date-list">
+            <ul class="date-list-add">
                 <li>
                     <p>创建时间</p>
                     <div class="date">
@@ -259,8 +259,7 @@
             </div>
             <div class="table-list">1</div>
             <div class="table-list">2</div>
-        </div>
-        
+        </div>       
     </div>
     <div class="page">
         <a class="prev" href="javascript:;">></a>
@@ -273,6 +272,109 @@
         <a class="num" href="javascript:;">10</a>
         <a class="num" href="javascript:;">11</a>
         <a class="next" href="javascript:;"><</a>
+    </div>
+
+    <div class="activiy-info">
+        <div class="activiy-info-title">
+            <h3>活动详情</h3>
+            <div class="r"><i class="narrow"></i><i class="expansion"></i><i class="close"></i></div>
+        </div>
+        <div class="activiy-info-centent">
+            <div class="activiy-info-centent-top">
+                <div class="aict-left">
+                    <ul>
+                        <li>
+                            <p>批次号</p>
+                            <label>
+                                <select>
+                                    <option>批次号</option>
+                                    <option>123456789</option>
+                                </select>
+                            </label>
+                        </li>
+                        <li>
+                            <p>活动名称</p>
+                            <label style="width:220px"><input type="text" placeholder="输入名称"></label>
+                        </li>
+                        <li>
+                            <p>参与对象</p>
+                            <label>
+                                <select>
+                                    <option>全部</option>
+                                    <option>123456789</option>
+                                </select>
+                            </label>
+                        </li>
+                         <li>
+                            <p>最多参与次数</p>
+                            <label><input type="text" placeholder="" value="1"></label>
+                            <i class="add"></i>
+                            <i class="reduce"></i>
+                        </li>
+                        <li>
+                            <p>送劵方式</p>
+                            <label>
+                                <select>
+                                    <option>注册送劵</option>
+                                    <option>123456789</option>
+                                </select>
+                            </label>
+                        </li>
+                        <li>
+                            <p>活动周期</p>
+                            <label style="width:220px">
+                                <select>
+                                    <option>2017.11.09~ 2017.11.18</option>
+                                    <option>2017.11.09~ 2017.11.18</option>
+                                </select>
+                            </label>
+                        </li>
+                         <li>
+                            <p>活动介绍</p>
+                            <label style="width:508px"><input type="text" placeholder=""></label>
+                        </li>
+                        <li>
+                            <p>创建人</p>
+                            <label><input type="text" placeholder=""></label>
+                        </li>
+                        <li>
+                            <p>创建时间</p>
+                            <label>
+                                <select>
+                                    <option>2017.11.18</option>
+                                    <option>2017.11.18</option>
+                                </select>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="aict-right">
+                    <p><i class="rule"></i><span>送券规则</span></p>
+                    <p><label><input type="text" value="无条件使用券-666 2张"></label><i class="add"></i></p>
+                    <p><label><input type="text" value="满减券-800-20"></label><i class="reduce"></i></p>
+                    <p><label><input type="text" value="生日劵"></label><i class="reduce"></i></p>
+                    <div class="btn"></div>
+                </div>
+            </div>
+            <div class="activiy-info-centent-middle">
+                <h5>优惠券有效期</h5>
+                <span>以领取时间开始</span>
+                <label><input type="text"></label>
+                <span style="margin-left:30px;">天有效</span>
+                <input class="radio" type="radio"></label>
+                <span>有效期范围</span>
+                <label style="width:223px;">
+                   <select>
+                        <option>2017.11.09~ 2017.11.18</option>
+                        <option>2017.11.09~ 2017.11.18</option>
+                    </select>
+                </label>
+                <i></i>
+            </div>
+            <div class="activiy-info-centent-bottom">
+                <div class="btn"></div>
+            </div>
+        </div>
     </div>
    
     <div class="go-back" id="goto-top">
@@ -303,6 +405,11 @@
         $(".page .num").on("click",function(){
             $(this).addClass("active").siblings().removeClass("active");
         })
+
+
+        $(".activiy-info-title .r i.close").on("click",function(){
+            $(this).parent().parent().parent().hide();
+        });
     })
 </script>
 <!-- script end -->

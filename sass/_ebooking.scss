@@ -970,7 +970,7 @@ body, #wrapper, html {
 		    	}
 		    }
 	    }
-	    .date-list{
+	    .date-list-add{
 	    	border-right:0;
 	    }
     }
@@ -1202,4 +1202,244 @@ body, #wrapper, html {
 			border-bottom:3px solid #f6ac1d;
 		}
     }
+}
+
+
+
+.activiy-info{
+	position:fixed;
+	top:50%;
+	left:50%;
+	z-index:10;
+	width:1100px;
+	height:auto;
+	background-color:#fff;
+	@include box-shadow(0px 3px 5px #ddd);
+	@include transform(translate(-50%,-50%));
+}
+.activiy-info-title{
+	padding:6px 30px;
+	width:100%;
+	height:60px;
+	background-color:#f6ac1d;
+	h3{
+		float:left;
+		font:24px/48px myFirstFont, $publicFont;
+		color:#fff;
+	}
+	.r{
+		float:right;
+		i{
+			margin-top:12px;
+			margin-left:10px;
+			float: left;
+			display: block;
+    		width:22px;
+	    	height:22px;
+	    	background: url(../images/ebooking_icon.png) no-repeat;
+	    	cursor:pointer;
+		}
+		i.narrow{
+			background-position:-161px -195px;
+		}
+		i.expansion{
+			background-position:-189px -195px;
+		}
+		i.close{
+			background-position:-217px -195px;
+		}
+	}
+}
+.activiy-info-centent{
+	padding:20px;
+	.activiy-info-centent-top{
+		border-bottom:1px solid #ddd;
+		.aict-left{
+		    float: left;
+			display: inline-block;
+			width:680px;
+			padding-right:20px;
+			border-right:1px solid #ddd;
+			ul li{
+				margin-bottom:20px;
+				float: left;
+				p{
+					float: left;
+					width:120px;
+					font:18px/1.5 myFirstFont, $publicFont;
+					color:#58595b;
+					text-align:right;
+					margin-right:30px;
+				}
+				label{
+		    		padding:0 10px;
+		    		float:left;
+					display:inline-block;
+					width:138px;
+					height:28px;
+					border:1px solid #ddd;
+					border-radius:5px;
+					font-size:0;
+					background-color:#f5f5f5;
+					input,select{
+						width:100%;
+						height:100%;
+						background:none;
+						border:none;
+						outline:none;
+						font:14px/1.2 myFirstFont, $publicFont;
+						color:#58595b;
+					}
+		    	}
+		    	i{
+		    		cursor: pointer;
+		    		margin-top:3px;
+		    		margin-left:8px;
+		    		float: left;
+		    		width:20px;
+			    	height:20px;
+			    	background: url(../images/ebooking_icon.png) no-repeat;
+		    	}
+		    	i.add{
+					background-position:-247px -195px;
+		    	}
+		    	i.reduce{
+					background-position:-273px -195px;
+		    	}
+			}
+			}
+		.aict-right{
+			padding-left:20px;
+			display: inline-block;
+			p{
+				margin-bottom:20px;
+			    overflow: hidden;
+				i{
+					float: left;
+			    	background: url(../images/ebooking_icon.png) no-repeat;
+				}
+				i.rule{
+					width:32px;
+			    	height:32px;
+					background-position:-325px -195px;
+					margin-right:10px;
+				}
+				i.add{
+					margin-left:10px;
+					width:20px;
+			    	height:20px;
+					background-position:-247px -195px;
+					cursor: pointer;
+		    	}
+		    	i.reduce{
+		    		margin-left:10px;
+		    		width:20px;
+			    	height:20px;
+					background-position:-273px -195px;
+					cursor: pointer;
+		    	}
+				span{
+					float: left;
+					font:18px/32px myFirstFont, $publicFont;
+					color:#58595b;
+				}
+				label{
+		    		padding:0 10px;
+		    		float:left;
+					display:inline-block;
+					width:260px;
+					height:28px;
+					border:1px solid #ddd;
+					border-radius:5px;
+					font-size:0;
+					background-color:#f5f5f5;
+					input,select{
+						width:100%;
+						height:100%;
+						background:none;
+						border:none;
+						outline:none;
+						font:14px/1.2 myFirstFont, $publicFont;
+						color:#58595b;
+					}
+		    	}
+			}
+			.btn{
+			    margin: -15px auto 0;
+		    	width:161px;
+		    	height:66px;
+		    	background: url(../images/ebooking_icon.png) 0 -236px no-repeat;
+		    	cursor:pointer;
+			}
+		}
+	}
+	.activiy-info-centent-middle{
+		padding:25px 0;
+		overflow: hidden;
+		border-bottom:1px solid #ddd;
+		h5{
+			float:left;
+			width:120px;
+			font:18px/30px myFirstFont, $publicFont;
+			color:#58595b;
+			text-align:right;
+			margin-right:160px;
+		}
+		span{
+			margin-right:10px;
+			float:left;
+			font:14px/30px myFirstFont, $publicFont;
+			color:#58595b;
+		}
+		label{
+    		padding:0 10px;
+    		float:left;
+			display:inline-block;
+			width:136px;
+			height:28px;
+			border:1px solid #ddd;
+			border-radius:5px;
+			font-size:0;
+			background-color:#f5f5f5;
+			input,select{
+				width:100%;
+				height:100%;
+				background:none;
+				border:none;
+				outline:none;
+				font:14px/1.2 myFirstFont, $publicFont;
+				color:#58595b;
+			}
+    	}
+    	.radio{
+    		margin:0 30px 0 0;
+    		float:left;
+    		font-size: 0;
+    		width:30px;
+    		height:30px;
+    		border-radius:100%;
+    		input{
+    			width:30px;
+    			height:30px;
+    		}
+    	}
+    	i{
+    		margin-left:10px;
+    		float:left;
+    		width:21px;
+    		height:21px;
+    		display:inline-block;
+    		background: url(../images/ebooking_icon.png) -300px -195px no-repeat;
+    		cursor:pointer;
+    	}
+	}
+	.activiy-info-centent-bottom{
+		.btn{
+			margin:0 auto;
+	    	width:161px;
+	    	height:66px;
+	    	background: url(../images/ebooking_icon.png) -160px -236px no-repeat;
+	    	cursor:pointer;
+		}
+	}
 }

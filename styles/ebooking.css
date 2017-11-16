@@ -872,7 +872,7 @@ body, #wrapper, html {
             font: 14px/20px myFirstFont, Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
             color: #58595b;
             text-align: center; }
-    .events-search .events-search-list .date-list {
+    .events-search .events-search-list .date-list-add {
       border-right: 0; }
   .events-search .btn {
     margin-top: 55px;
@@ -1071,5 +1071,212 @@ body, #wrapper, html {
     .date-list .date-list-num dl dd.active {
       background-color: #f5f5f5;
       border-bottom: 3px solid #f6ac1d; }
+
+.activiy-info {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  width: 1100px;
+  height: auto;
+  background-color: #fff;
+  -moz-box-shadow: 0px 3px 5px #ddd;
+  -webkit-box-shadow: 0px 3px 5px #ddd;
+  box-shadow: 0px 3px 5px #ddd;
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
+.activiy-info-title {
+  padding: 6px 30px;
+  width: 100%;
+  height: 60px;
+  background-color: #f6ac1d; }
+  .activiy-info-title h3 {
+    float: left;
+    font: 24px/48px myFirstFont, Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+    color: #fff; }
+  .activiy-info-title .r {
+    float: right; }
+    .activiy-info-title .r i {
+      margin-top: 12px;
+      margin-left: 10px;
+      float: left;
+      display: block;
+      width: 22px;
+      height: 22px;
+      background: url(../images/ebooking_icon.png) no-repeat;
+      cursor: pointer; }
+    .activiy-info-title .r i.narrow {
+      background-position: -161px -195px; }
+    .activiy-info-title .r i.expansion {
+      background-position: -189px -195px; }
+    .activiy-info-title .r i.close {
+      background-position: -217px -195px; }
+
+.activiy-info-centent {
+  padding: 20px; }
+  .activiy-info-centent .activiy-info-centent-top {
+    border-bottom: 1px solid #ddd; }
+    .activiy-info-centent .activiy-info-centent-top .aict-left {
+      float: left;
+      display: inline-block;
+      width: 680px;
+      padding-right: 20px;
+      border-right: 1px solid #ddd; }
+      .activiy-info-centent .activiy-info-centent-top .aict-left ul li {
+        margin-bottom: 20px;
+        float: left; }
+        .activiy-info-centent .activiy-info-centent-top .aict-left ul li p {
+          float: left;
+          width: 120px;
+          font: 18px/1.5 myFirstFont, Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+          color: #58595b;
+          text-align: right;
+          margin-right: 30px; }
+        .activiy-info-centent .activiy-info-centent-top .aict-left ul li label {
+          padding: 0 10px;
+          float: left;
+          display: inline-block;
+          width: 138px;
+          height: 28px;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          font-size: 0;
+          background-color: #f5f5f5; }
+          .activiy-info-centent .activiy-info-centent-top .aict-left ul li label input, .activiy-info-centent .activiy-info-centent-top .aict-left ul li label select {
+            width: 100%;
+            height: 100%;
+            background: none;
+            border: none;
+            outline: none;
+            font: 14px/1.2 myFirstFont, Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+            color: #58595b; }
+        .activiy-info-centent .activiy-info-centent-top .aict-left ul li i {
+          cursor: pointer;
+          margin-top: 3px;
+          margin-left: 8px;
+          float: left;
+          width: 20px;
+          height: 20px;
+          background: url(../images/ebooking_icon.png) no-repeat; }
+        .activiy-info-centent .activiy-info-centent-top .aict-left ul li i.add {
+          background-position: -247px -195px; }
+        .activiy-info-centent .activiy-info-centent-top .aict-left ul li i.reduce {
+          background-position: -273px -195px; }
+    .activiy-info-centent .activiy-info-centent-top .aict-right {
+      padding-left: 20px;
+      display: inline-block; }
+      .activiy-info-centent .activiy-info-centent-top .aict-right p {
+        margin-bottom: 20px;
+        overflow: hidden; }
+        .activiy-info-centent .activiy-info-centent-top .aict-right p i {
+          float: left;
+          background: url(../images/ebooking_icon.png) no-repeat; }
+        .activiy-info-centent .activiy-info-centent-top .aict-right p i.rule {
+          width: 32px;
+          height: 32px;
+          background-position: -325px -195px;
+          margin-right: 10px; }
+        .activiy-info-centent .activiy-info-centent-top .aict-right p i.add {
+          margin-left: 10px;
+          width: 20px;
+          height: 20px;
+          background-position: -247px -195px;
+          cursor: pointer; }
+        .activiy-info-centent .activiy-info-centent-top .aict-right p i.reduce {
+          margin-left: 10px;
+          width: 20px;
+          height: 20px;
+          background-position: -273px -195px;
+          cursor: pointer; }
+        .activiy-info-centent .activiy-info-centent-top .aict-right p span {
+          float: left;
+          font: 18px/32px myFirstFont, Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+          color: #58595b; }
+        .activiy-info-centent .activiy-info-centent-top .aict-right p label {
+          padding: 0 10px;
+          float: left;
+          display: inline-block;
+          width: 260px;
+          height: 28px;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          font-size: 0;
+          background-color: #f5f5f5; }
+          .activiy-info-centent .activiy-info-centent-top .aict-right p label input, .activiy-info-centent .activiy-info-centent-top .aict-right p label select {
+            width: 100%;
+            height: 100%;
+            background: none;
+            border: none;
+            outline: none;
+            font: 14px/1.2 myFirstFont, Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+            color: #58595b; }
+      .activiy-info-centent .activiy-info-centent-top .aict-right .btn {
+        margin: -15px auto 0;
+        width: 161px;
+        height: 66px;
+        background: url(../images/ebooking_icon.png) 0 -236px no-repeat;
+        cursor: pointer; }
+  .activiy-info-centent .activiy-info-centent-middle {
+    padding: 25px 0;
+    overflow: hidden;
+    border-bottom: 1px solid #ddd; }
+    .activiy-info-centent .activiy-info-centent-middle h5 {
+      float: left;
+      width: 120px;
+      font: 18px/30px myFirstFont, Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+      color: #58595b;
+      text-align: right;
+      margin-right: 160px; }
+    .activiy-info-centent .activiy-info-centent-middle span {
+      margin-right: 10px;
+      float: left;
+      font: 14px/30px myFirstFont, Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+      color: #58595b; }
+    .activiy-info-centent .activiy-info-centent-middle label {
+      padding: 0 10px;
+      float: left;
+      display: inline-block;
+      width: 136px;
+      height: 28px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 0;
+      background-color: #f5f5f5; }
+      .activiy-info-centent .activiy-info-centent-middle label input, .activiy-info-centent .activiy-info-centent-middle label select {
+        width: 100%;
+        height: 100%;
+        background: none;
+        border: none;
+        outline: none;
+        font: 14px/1.2 myFirstFont, Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+        color: #58595b; }
+    .activiy-info-centent .activiy-info-centent-middle .radio {
+      margin: 0 30px 0 0;
+      float: left;
+      font-size: 0;
+      width: 30px;
+      height: 30px;
+      border-radius: 100%; }
+      .activiy-info-centent .activiy-info-centent-middle .radio input {
+        width: 30px;
+        height: 30px; }
+    .activiy-info-centent .activiy-info-centent-middle i {
+      margin-left: 10px;
+      float: left;
+      width: 21px;
+      height: 21px;
+      display: inline-block;
+      background: url(../images/ebooking_icon.png) -300px -195px no-repeat;
+      cursor: pointer; }
+  .activiy-info-centent .activiy-info-centent-bottom .btn {
+    margin: 0 auto;
+    width: 161px;
+    height: 66px;
+    background: url(../images/ebooking_icon.png) -160px -236px no-repeat;
+    cursor: pointer; }
 
 /*# sourceMappingURL=ebooking.css.map */
