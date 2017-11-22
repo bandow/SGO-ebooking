@@ -1,8 +1,8 @@
 @import 'public/base';
-@font-face{
-	font-family: myFirstFont;
-	src: url('../font/hiragino.otf')
-}
+// @font-face{
+// 	font-family: myFirstFont;
+// 	src: url('../font/hiragino.otf')
+// }
 body.sgo-login{
 	height: auto;
     background:url(../images/login_bg.jpg) no-repeat center fixed;
@@ -48,7 +48,7 @@ body.sgo-login{
 			span{
 				float:left;
 				margin-left:15px;
-				font:18px/48px myFirstFont, $publicFont;
+				font:18px/48px $publicFont;
 				color:#fff;
 			}
 		}
@@ -83,7 +83,7 @@ body.sgo-login{
 		overflow:hidden;
 		padding-right:104px;
 		p{
-			font:12px/2 myFirstFont, $publicFont;
+			font:12px/2 $publicFont;
 			color:#fff;
 			text-align:right;
 		}
@@ -139,7 +139,7 @@ body.sgo-login{
 				p{
 					float:right;
 					display:inline-block;
-					font:72px/1.2 myFirstFont, $publicFont;
+					font:72px/1.2 $publicFont;
 					color:#fff;
 					margin-right:108px;
 				}
@@ -175,10 +175,10 @@ body.sgo-login{
 							outline:none;
 							width:100%;
 							height:100%;
-							font:18px/40 pxmyFirstFont, $publicFont;
+							font:18px/40px $publicFont;
 							color:#fff;
 							&::-webkit-input-placeholder{
-								font:18px/40 pxmyFirstFont, $publicFont;
+								font:18px/40px $publicFont;
 								color:#fff;
 							}
 						}
@@ -214,10 +214,10 @@ body.sgo-login{
 							outline:none;
 							width:100%;
 							height:100%;
-							font:18px/40 pxmyFirstFont, $publicFont;
+							font:18px/40px $publicFont;
 							color:#fff;
 							&::-webkit-input-placeholder{
-								font:18px/40 pxmyFirstFont, $publicFont;
+								font:18px/40px $publicFont;
 								color:#fff;
 							}
 						}
@@ -245,7 +245,7 @@ body.sgo-login{
 				    background:-o-linear-gradient(top, #ff8b52, #f7ac20); 
 				    a{
 				    	display:block;
-				    	font:24px/54px pxmyFirstFont, $publicFont;
+				    	font:24px/54px $publicFont;
 						color:#fff;
 						text-align:center;
 				    }
@@ -270,7 +270,7 @@ body.sgo-login{
 				float:left;
 				display:inline-block;
 				background: no-repeat top left; 
-				font:30px/1 myFirstFont, $publicFont;
+				font:30px/1 $publicFont;
 				height:30px; 
 				line-height:30px; 
 				padding-left:36px; 
@@ -286,7 +286,7 @@ body.sgo-login{
 			p { 
 				float:left;
 				display:inline-block;
-				font:16px/30px myFirstFont, $publicFont;
+				font:16px/30px $publicFont;
 			}
 			p span { 
 				margin:0 10px; 
@@ -342,7 +342,7 @@ body.sgo-login{
 					.content{
 						margin-left:10px;
 						p{
-							font:14px/24px myFirstFont, $publicFont;
+							font:14px/24px $publicFont;
 							color:#fff;
 							>a{
 								display:inline-block;
@@ -350,7 +350,7 @@ body.sgo-login{
 							}
 						}
 						a{
-							font:14px/24px myFirstFont, $publicFont;
+							font:14px/24px $publicFont;
 							color:#fff;
 							display:block;
 							text-decoration:none;
@@ -364,7 +364,7 @@ body.sgo-login{
 				}
 			}
 			>p{
-				font:12px/48px myFirstFont, $publicFont;
+				font:12px/48px $publicFont;
 				color:#58595b;
 			}
 		}
@@ -378,7 +378,7 @@ body.sgo-login{
 				p{
 					position:relative;
 					padding-left:8px;
-					font:14px/36px myFirstFont, $publicFont;
+					font:14px/36px $publicFont;
 					color:#fff;
 					&:before{
 						position: absolute;
@@ -438,7 +438,7 @@ body.sgo-login{
 				float:left;
 				margin-left:10px;
 				display:inline-block;
-				font:18px/48px myFirstFont, $publicFont;
+				font:18px/48px $publicFont;
 				color:#fff;	
 			}
 		}
@@ -459,10 +459,10 @@ body.sgo-login{
 				background:none;
 				border:none;
 				outline:none;
-				font:14px/1 myFirstFont, $publicFont;
+				font:14px/1 $publicFont;
 				color:#fff;
 				&::-webkit-input-placeholder{
-					font:14px/1 myFirstFont, $publicFont;
+					font:14px/1 $publicFont;
 					color:#fff;
 				}
 			}
@@ -531,7 +531,7 @@ body.sgo-login{
 					}
 					p{
 						margin-left:64px;
-						font:18px/28px pxmyFirstFont, $publicFont;
+						font:18px/28px $publicFont;
 						color:#fff;
 					}
 				}
@@ -562,7 +562,7 @@ body.sgo-login{
 		    background:-o-linear-gradient(top, #ff8b52, #f7ac20); 
 		    a{
 		    	display:block;
-		    	font:24px/54px pxmyFirstFont, $publicFont;
+		    	font:24px/54px $publicFont;
 				color:#fff;
 				text-align:center;
 		    }	
@@ -615,7 +615,7 @@ body.sgo-login{
 				p{
 					margin-left:10px;
 					float:left;
-					font:18px/62px pxmyFirstFont, $publicFont;
+					font:18px/62px $publicFont;
 					color:#fff;
 				}
 			}
@@ -694,7 +694,7 @@ body.sgo-login{
 		height:100px;
 		background:none;
 		p{
-			font:12px/2 pxmyFirstFont, $publicFont;
+			font:12px/2 $publicFont;
 			color:#fff;
 		}
 	}
