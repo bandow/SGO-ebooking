@@ -8,6 +8,49 @@
 	<meta name=”author” content="name, bandow"/>         
 	<title>ebooking</title>
 	<link rel="stylesheet" href="styles/ebooking.css">
+	<style>
+		#page-wrapper .header-nav .nav-right{overflow: inherit;}
+		.nav-right .user{
+			position:relative;
+		    float: left;
+		    cursor:pointer;
+		}
+		.nav-right .user-list{
+			position:absolute;
+			left:18px;
+			top:61px;
+		    z-index: 10;
+		    display:none;
+		    /*padding-top:10px;*/
+			background-color:#fff;
+			border-radius:3px;
+		}
+		.nav-right .user-list dl{
+			border:1px solid #eee;
+			border-top:3px solid #f6ac1d;
+		}
+		.nav-right .user-list dl dd{
+			width:120px;
+		}
+		.nav-right .user-list dl dd a{
+			font: 14px/2.4 "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+		    color: #333;
+		    text-decoration: none;
+		    display: block;
+		    text-align:center;
+		}
+		.marquee{
+		    float: left;
+			font: 14px/2.4 "Microsoft YaHei", Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", STXihei, STHeiti, Heiti, SimSun, sans-serif; 
+			color: #fff; 
+		    margin: 14px 100px 14px 0;
+			white-space: nowrap; 
+			overflow: hidden;
+			width: 300px;
+		}
+	    .inner{ width:1000px;overflow:hidden;}
+	    .inner p{ display:inline-block;}
+	</style>
 </head>
 <body class="sgo-ebooking">
 	<div class="warpper" id="wrapper">
@@ -48,8 +91,22 @@
 		<div id="page-wrapper">
 			<div class="header-nav">
 				<div class="nav-right">
+					<div id="marquee" class="marquee">
+					    <div class="inner">
+					      <p class="txt">文字如果超出了宽度自动向左滚动文字如果超出了宽度自动向左滚动。</p>
+					    </div>
+					</div>
 					<a class="room arrow-bottom" href="">测试门店一</a>
-					<a class="user" href=""><span>值班经理</span><i><img src="images/head.jpg" alt=""></i></a>
+					<div class="user arrow-bottom">
+						<i style="margin-right:5px"><img src="images/head.jpg" alt=""></i>
+						<span style="margin-right:10px;">值班经理</span>
+						<div class="user-list">
+							<dl>
+								<dd><a href="">基本资料</a></dd>
+								<dd><a href="">安全设置</a></dd>
+							</dl>
+						</div>		
+					</div>		
 					<a class="quit" href=""><i></i></a>
 					<a class="go-online" href="">
 						<i></i>
@@ -102,9 +159,43 @@
         	$("#content-main iframe").attr("src",dataId);
         })
 
-  
+  		
 
+  		//新添加js
+  		$(".nav-right .user").on("mouseover",function(){
+  			$(".nav-right .user-list").show();
+  		})
+  		$(".nav-right .user").on("mouseout",function(){
+  			$(".nav-right .user-list").hide();
+  		})
+  		
     });
+</script>
+<script>
+	//跑马灯
+	var wrapper = document.getElementById('marquee');
+	var inner = wrapper.getElementsByTagName('div')[0];
+	var p = document.getElementsByTagName('p')[0];
+	var p_w = p.offsetWidth;
+	var wrapper_w = wrapper.offsetWidth;
+	window.onload=function fun(){  
+		if(wrapper_w > p_w){ return false;}
+		inner.innerHTML+=inner.innerHTML;
+		setTimeout("fun1()",2000);    
+	}
+	function fun1(){    
+		if(p_w > wrapper.scrollLeft){
+			wrapper.scrollLeft++;
+			setTimeout("fun1()",30);
+		}
+		else{
+			setTimeout("fun2()",2000);
+		}
+	}
+	function fun2(){
+		wrapper.scrollLeft=0;
+		fun1();
+	}
 </script>
 <!-- script end -->
 </html>
